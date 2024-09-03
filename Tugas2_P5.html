@@ -106,9 +106,14 @@
             } else if (click == 'C') {
                 inputLabel.innerHTML = '0';
             } else {
-                inputLabel.innerHTML += click;   
+                if (inputLabel.innerHTML == '0') {
+                    inputLabel.innerHTML = click;
+                } else {
+                    inputLabel.innerHTML += click;
+                }
             }
         }
+
 
         function backspace () {
             var currentText = inputLabel.innerHTML;
